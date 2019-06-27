@@ -3,7 +3,7 @@
 
   "manifest_version": 2,
   "name": "__MSG_application_title__",
-  "short_name": "Highlight This",
+  "short_name": "Chromium-Highlighter",
   "description": "__MSG_application_description__",
   "default_locale": "en",
   "permissions": ["tabs","contextMenus","notifications","activeTab","alarms","downloads","storage"],
@@ -23,11 +23,11 @@
       "description": "ScrollHighlight"
     }
   },
-  "version": "4.5",
+  "version": "1.0",
   "content_scripts": [
     {
       "matches": ["http://*/*","https://*/*"],
-      "js": ["libs/jquery/jquery-3.3.1.js","hilitor.js","tabWordHighlighter.js"],
+      "js": ["libs/jquery/jquery-3.4.1.js","hilitor.js","tabWordHighlighter.js"],
       "css" : ["highlightThis.css"],
       "all_frames": true,
       "run_at": "document_start",
