@@ -19,3 +19,5 @@ Easy to use Chrome Extension that automatically searches for defined words in th
 Changelog
 27/06/2019
 *updated latest jquery 3.4.1
+04/07/2019
+*New Icons and css style
