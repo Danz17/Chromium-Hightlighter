@@ -41,7 +41,7 @@ if(window.location == window.parent.location){
     chrome.runtime.onMessage.addListener(
         function (request, sender, sendResponse) {
             debug && console.log("got a message", request);
-            if (sender.id == "abcibokldhgkclhihipipbiaednfcpia" || sender.id == "fgmbnmjmbjenlhbefngfibmjkpbcljaj" || sender.id=="highlightthis@deboel.eu") {
+            if (sender.id == "abcibokldhgkclhihipipbiaednfcpia" || sender.id == "fgmbnmjmbjenlhbefngfibmjkpbcljaj" || sender.id=="aqweider@gmail.com") {
                 if (request.command == "ScrollHighlight") {
                     jumpNext();
                     showMarkers();

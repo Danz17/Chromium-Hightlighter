@@ -58,10 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById("filterwords").addEventListener('keyup',function(){filterWords(this.value)});
 
-    document.getElementById("showDonate").addEventListener('click',function(){
-        window.open("http://www.deboel.eu/HighlightThis2.html");
-    });
-
     //words found page
     document.getElementById("dontshowwords").addEventListener('click', function () {
         showWordsFound(false);
@@ -190,28 +186,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         debug && console.log(document.getElementById("field_remoteType").value);
     })
-
-    if (chrome.extension.getBackgroundPage().showDonate()){
-        document.getElementById("donate").style.display="block";
-        document.getElementById("menu").style.display="none";
-        document.getElementById("donatebtn").addEventListener('click', function (ev) {
-            donate(true);
-            return false;
-        });
-        document.getElementById("dontdonate").addEventListener('click', function (ev) {
-            donate(false);
-            return false;
-        });
-        
-    }
-    else {
-        if (onPageShown) {
-            drawInterface();
-        }
-        else {
-            onPage();
-        }
-    }
 });
 
 function hintNonUnicodeChar(value){
@@ -223,25 +197,10 @@ function hintNonUnicodeChar(value){
     }
 }
 
-function donate(state){
-    document.getElementById("donate").style.display="none";
-    document.getElementById("menu").style.display="block";
-    if(state){
-        window.open("https://www.paypal.me/WDeboel/1EUR");
-    }
-    chrome.extension.getBackgroundPage().setDonate(state);
-    if (onPageShown) {
-        drawInterface();
-    }
-    else {
-        onPage();
-    }
-}
 function fillLiterals(){
 
     document.getElementById("litTitle").innerHTML = chrome.i18n.getMessage("popup_title");
     document.getElementById("popup_title").innerHTML = chrome.i18n.getMessage("popup_title");
-    document.getElementById("showDonate").innerHTML = chrome.i18n.getMessage("popup_showDonate");
     document.getElementById("byline").innerHTML = chrome.i18n.getMessage("popup_byline");
     document.getElementById("popup_nowords").innerHTML = chrome.i18n.getMessage("popup_nowords");
     //document.getElementById("popup_addnewlist").innerHTML = chrome.i18n.getMessage("popup_addnewlist");
@@ -298,12 +257,6 @@ function fillLiterals(){
     document.getElementById("localLabel").innerHTML = chrome.i18n.getMessage("localLabel");
     document.getElementById("remoteLabel").innerHTML = chrome.i18n.getMessage("remoteLabel");
     document.getElementById("field_source").innerHTML = chrome.i18n.getMessage("field_source");
-
-    document.getElementById("donate1").innerHTML = chrome.i18n.getMessage("donate1");
-    document.getElementById("donate2").innerHTML = chrome.i18n.getMessage("donate2");
-    document.getElementById("donate3").innerHTML = chrome.i18n.getMessage("donate3");
-    document.getElementById("donatebtn").innerHTML = chrome.i18n.getMessage("donatebtn");
-    document.getElementById("dontdonate").innerHTML = chrome.i18n.getMessage("dontdonate");
 
     document.getElementById("field_performance").innerHTML = chrome.i18n.getMessage("performance");
     
@@ -503,15 +456,6 @@ function showSettings() {
     document.getElementById("newGroupType").style.display = "none";
     document.getElementById("deleteGroup").style.display = "none";
     document.getElementById("settingsGroup").style.display = "block";
-}
-
-function showDonate() {
-    /*document.getElementById("showFoundWords").checked=chrome.extension.getBackgroundPage().HighlightsData.ShowFoundWords;
-    document.getElementById("neverHighlightOn").value=chrome.extension.getBackgroundPage().HighlightsData.neverHighlightOn.join("\n");*/
-    document.getElementById("wordDisplay").style.display = "none";
-    document.getElementById("menu").style.display = "none";
-
-    document.getElementById("donateGroup").style.display = "block";
 }
 
 
@@ -883,7 +827,7 @@ function renderOnOff() {
     }
     else {
         document.getElementById('offDesc').innerHTML = "";
-        document.getElementById('header').style.backgroundColor = "#0091EA";
+        document.getElementById('header').style.backgroundColor = "#FFC612";
     }
 }
 

@@ -3,7 +3,7 @@
     "message": "Автоматически находит и выделяет слова и фразы на веб-странице в соответствии с вашим списком"
   },
   "application_title": {
-    "message": "Chromium-Highlighter: находит и отмечает слова"
+    "message": "Highlight This: находит и отмечает слова"
   },
   "deleteGroupLink": {
     "message": "Удалить список"

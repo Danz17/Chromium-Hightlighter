@@ -1,7 +1,7 @@
 body
 {
   font-family:Arial;
-  width:450px;   
+  width:350px;   
   font-size:12px;
   min-height:500px;
   margin:0px;
@@ -40,8 +40,8 @@ vertical-align:top;
 
 table{font-size: 12px;}
 .header{
-  height:35px;
-  background-color: #0091EA;
+  height:40px;
+  background-color: #FFC612;
 }
 .title
 {
@@ -120,7 +120,7 @@ button#editWordsButton {
   cursor: pointer;}
 
 .primaryLink{
-    background-color: #0091EA;
+    background-color: #FFC612;
     color: white;
     text-decoration: none;
     padding: 5 15 5 15;
@@ -132,7 +132,7 @@ button#editWordsButton {
     color:#333;
 }
 .secondaryLink:hover{
-    color: #0091EA;
+    color: #FFC612;
 }
 .onoffswitch {
     position: relative; width: 66px;
@@ -168,24 +168,22 @@ button#editWordsButton {
 .onoffswitch-inner:before {
     content: "On";
     padding-left: 10px;
-    #background-color: #0091EA;
-    background-color: limegreen;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #444444;
 }
 
 .onoffswitch-inner:after {
     content: "Off";
     padding-right: 10px;
-
-    background-color: #EEEEEE;
-    color: #999999;
+    background-color: #444444;
+    color: #FFFFFF;
     text-align: right;
 }
 
 .onoffswitch-switch {
     width: 13px; margin: 7px;
-    background: #FFFFFF;
-    border: 2px solid #fff; border-radius: 20px;
+    background: #5B5B5B;
+    border: 3px solid #fff; border-radius: 20px;
     position: absolute; top: 0; bottom: 0; right: 35px;
     -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
     -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
@@ -232,7 +230,7 @@ float: left;
     position: fixed;
     bottom: 10px;
     /* color: white; */
-    background-color: #0091EA;
+    background-color: #FFC612;
     width: 40px;
     height: 40px;
     right: 5px;
@@ -268,7 +266,7 @@ float: left;
     float: left;
     line-height: 20px;
     margin-left: 5px;
-    background-color: #0091EA;
+    background-color: #FFC612;
     padding: 2px 7px 2px 7px;
     border-radius: 3px;
     cursor: pointer;
@@ -279,7 +277,7 @@ float: left;
     float: right;
     line-height: 20px;
     margin-left: 5px;
-    background-color: #0091EA;
+    background-color: #FFC612;
     padding: 2px 7px 2px 7px;
     border-radius: 3px;
     cursor: pointer;
@@ -297,7 +295,7 @@ float: left;
 
 
 .flipGroup, .editGroup{
-    color:#0091EA;
+    color:#FFC612;
     font-size: 16px;
     margin-left: 10px;
     padding-top: 10px;
@@ -333,7 +331,7 @@ float: left;
     left: -25px;
     cursor: pointer;
     width: 0;
-    color:#0091EA;
+    color:#FFC612;
 }
 #newGroup,#settingsGroup{
     padding-left:20px;
@@ -401,12 +399,12 @@ input#group {
 
 /* Change background color of buttons on hover */
 .tab span:hover {
-    border-bottom: 1px solid #0091EA !important;
+    border-bottom: 1px solid #FFC612 !important;
 }
 
 /* Create an active/current tablink class */
 .tab span.active {
-    border-bottom: 3px solid #0091EA !important;
+    border-bottom: 3px solid #FFC612 !important;
 }
 
 /* Style the tab content */
@@ -416,49 +414,3 @@ input#group {
     border: 1px solid #ccc;
     border-top: none;
 }*/
-
-.devpicture{
-    opacity: 1;
-    background-size: cover;
-    width: 76px;
-    height: 76px;
-    background-image: url(images/wim.jpg);
-    background-color: white;
-    box-shadow: rgba(2, 2, 2, 0.3) 0px 5px 12px 0px;
-    overflow: hidden;
-    border-radius: 50%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    transition: opacity 0.3s ease 0s;
-    margin: 0 auto;
-}
-
-#donate{
-    margin: 10;
-    border: 1px solid #DDD;
-    text-align: center;
-    font-size: 16px;
-    color: #666;
-    padding: 15px;}
-
-.donatebtn{
-    background-color: darkorange;
-    font-size: 16px;
-    border-radius: 3px;
-    color: white;
-    width: 150px;
-    height: 30px;
-    cursor: hand;
-}
-
-.donatebtn:hover{
-    font-weight: bold;
-    background-color: orangered;
-}
-.dontdonatelink{
-    text-decoration: underline;
-
-}
-.dontdonatelink:hover{
-    font-weight:bold;
-}

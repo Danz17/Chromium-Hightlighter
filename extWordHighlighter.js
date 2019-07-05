@@ -18,8 +18,7 @@ else {
     HighlightsData.neverHighlightOn = [];
     HighlightsData.ShowFoundWords = true;
     HighlightsData.PrintHighlights = true;
-    var today=new Date();
-    HighlightsData.Donate=today.setDate(today.getDate()+20);    
+    var today=new Date();   
     HighlightsData.PerformanceSetting=200;
     HighlightsData.Groups = {
         "Default Group": {
@@ -160,9 +159,7 @@ function upgradeVersion(inData){
             inData.Version="11";
         }
         if (inData.Version=="11"){
-            backup(inData,inData.Version);
-            var today=new Date();
-            inData.Donate=today;            
+            backup(inData,inData.Version);           
             inData.Version="12";
         }
         if (inData.Version=="12"){
@@ -283,7 +280,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
                 "type": "basic",
                 "iconUrl": "Plugin96.png",
                 //"requireInteraction": false,
-                "title": "Highlight This",
+                "title": "Chromium Highlighter",
                 "message": info.selectionText + " was already assigned to the word list"
             });
             //window.alert(info.selectionText + " was already assigned to the word list");
@@ -456,7 +453,7 @@ function onPage(){
 function showHighlights(label, tabId) 
 {
   chrome.browserAction.setBadgeText({"text":label,"tabId":tabId}); 
-  chrome.browserAction.setBadgeBackgroundColor ({"color":"#0091EA"});
+  chrome.browserAction.setBadgeBackgroundColor ({"color":"#FFC612"});
 }
 
 function getDataFromStorage(dataType) {
@@ -474,22 +471,6 @@ function showWordsFound(inState) {
     localStorage['HighlightsData']=JSON.stringify(HighlightsData);
 }
 
-function showDonate(){
-    var today=new Date();
-    if(HighlightsData.Donate<today){return true;}
-    return false; 
-}
-
-function setDonate(state){
-    var today=new Date();
-    if(state){
-        HighlightsData.Donate=today.setDate(today.getDate()+365);
-    }
-    else {
-        HighlightsData.Donate=today.setDate(today.getDate()+100);
-    }
-    localStorage['HighlightsData']=JSON.stringify(HighlightsData);
-}
 function setPrintHighlights(inState) {
     HighlightsData.PrintHighlights=inState;
     printHighlights=inState;
